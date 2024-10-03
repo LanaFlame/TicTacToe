@@ -15,14 +15,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < 9; i++) {
             int move = scanner.nextInt();
-            if (move==1 || move==2 || move==3) {
+            if ((move==1 || move==2 || move==3) && square[0][move-1] == ' ') {
                 square[0][move-1] = s;
-            } else if (move==4 || move==5 || move==6) {
+            } else if ((move==4 || move==5 || move==6) && square[0][move-4] == ' ') {
                 square[1][move-4] = s;
-            } else if (move==7 || move==8 || move==9) {
+            } else if ((move==7 || move==8 || move==9) && square[0][move-7] == ' ') {
                 square[2][move-7] = s;
             } else {
-                System.out.println("wrong number");
+                System.out.println("invalid number entered or cell is occupied");
                 i--;
                 continue;
             }
