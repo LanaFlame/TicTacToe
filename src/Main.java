@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +11,7 @@ public class Main {
         createSquare(square);
         char s = 'X';
         char n = 'O';
-        char tmp = ' ';
+        char tmp;
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < 9; i++) {
             int move = scanner.nextInt();
@@ -31,6 +30,19 @@ public class Main {
             s = n;
             n = tmp;
             createSquare(square);
+            for (int j = 0; j < 2; j++) {
+                if (square[j][0] == square[j][1] && square[j][0] == square[j][2] && square[j][0] != ' ') {
+                    System.out.println("You win");
+                    break;
+                } else if (square[0][j] == square[1][j] && square[0][j] == square[2][j] && square[0][j] != ' ') {
+                    System.out.println("You win");
+                    break;
+                } else if ((square[0][0] == square[1][1] && square[0][0] == square[2][2] && square[0][0] != ' ') ||
+                        (square[0][2] == square[1][1] && square[0][2] == square[2][0] && square[0][2] != ' ')) {
+                    System.out.println("You win");
+                    break;
+                }
+            }
         }
 
     }
