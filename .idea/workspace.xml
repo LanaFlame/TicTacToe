@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c71393b0-c04a-483f-8d22-82a028092c74" name="Changes" comment="added check for occupied cells">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c71393b0-c04a-483f-8d22-82a028092c74" name="Changes" comment="extracted createSquare">
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +87,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727985445545</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="extracted createSquare">
+      <option name="closed" value="true" />
+      <created>1728141266478</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728141266478</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -96,6 +103,7 @@
     <MESSAGE value="define winner" />
     <MESSAGE value="fixed the game ending" />
     <MESSAGE value="added check for occupied cells" />
-    <option name="LAST_COMMIT_MESSAGE" value="added check for occupied cells" />
+    <MESSAGE value="extracted createSquare" />
+    <option name="LAST_COMMIT_MESSAGE" value="extracted createSquare" />
   </component>
 </project>

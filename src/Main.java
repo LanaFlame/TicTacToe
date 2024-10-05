@@ -6,7 +6,8 @@ public class Main {
         char s = 'X';
         char n = 'O';
         char tmp;
-        boolean diagonalCheck;
+        boolean leftDiagonalCheck;
+        boolean rightDiagonalCheck;
         Scanner scanner = new Scanner(System.in);
         drawSquare(square);
         for (int i = 0; i < 9; i++) {
@@ -26,8 +27,8 @@ public class Main {
             tmp = s;
             s = n;
             n = tmp;
-            diagonalCheck = (square[0][0] == square[1][1] && square[0][0] == square[2][2] && square[0][0] != ' ')
-                    || (square[0][2] == square[1][1] && square[0][2] == square[2][0] && square[0][2] != ' ');
+            leftDiagonalCheck = square[0][0] == square[1][1] && square[0][0] == square[2][2] && square[0][0] != ' ';
+            rightDiagonalCheck = square[0][2] == square[1][1] && square[0][2] == square[2][0] && square[0][2] != ' ';
             for (int j = 0; j < 3; j++) {
                 if ((square[j][0] == square[j][1] && square[j][0] == square[j][2] && square[j][0] != ' ')
                         || (square[0][j] == square[1][j] && square[0][j] == square[2][j] && square[0][j] != ' ')) {
@@ -35,7 +36,7 @@ public class Main {
                     return;
                 }
             }
-            if (diagonalCheck) {
+            if (leftDiagonalCheck || rightDiagonalCheck) {
                 System.out.println("You win");
                 return;
             }
